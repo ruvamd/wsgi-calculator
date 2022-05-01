@@ -80,7 +80,6 @@ def resolve_path(path):
     Should return two values: a callable and an iterable of
     arguments.
     """
-    #Keep getting 404 error - cannot figure out issue!!!!
     funcs = {
         '' : add,
         'add' : add,
@@ -93,7 +92,7 @@ def resolve_path(path):
     args = path[1:]
 
     try:
-        func = funcs[func_name]
+        func = funcs[func]
     except KeyError:
         raise NameError
 
